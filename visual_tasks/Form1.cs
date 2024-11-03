@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace visual_tasks
 {
     public partial class Form1 : Form
@@ -23,6 +24,12 @@ namespace visual_tasks
 
             calculatorForm.Show();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            image_panner image_Panner = new image_panner();
+            image_Panner.Show(); 
         }
     }
 }
