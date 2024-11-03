@@ -80,7 +80,33 @@ namespace visual_tasks
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
-            // Implement deletion if necessary
+            if (imagePaths.Count == 0)
+            {
+                MessageBox.Show("No images to delete.");
+                return;
+            }
+
+            // Remove the current image from the list
+            imagePaths.RemoveAt(currentImageIndex);
+
+            // Check if there are any images left after deletion
+            if (imagePaths.Count == 0)
+            {
+                // If no images are left, reset the current index and clear the PictureBox
+                currentImageIndex = 0;
+                pictureBox1.Image = null; // Clear the displayed image
+            }
+            else
+            {
+                // If there are still images left, adjust the index
+                if (currentImageIndex >= imagePaths.Count)
+                {
+                    currentImageIndex = 0; // Reset to the first image if the last one was deleted
+                }
+
+                // Display the new current image
+                DisplayImage(imagePaths[currentImageIndex]);
+            }
         }
     }
 }
