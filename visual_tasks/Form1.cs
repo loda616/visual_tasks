@@ -16,5 +16,13 @@ namespace visual_tasks
         {
             InitializeComponent();
         }
+
+        private void Open_Calculator(object sender, EventArgs e)
+        {
+            FCalculatorForm calculatorForm = new FCalculatorForm();
+
+            calculatorForm.Show();
+
+        }
     }
 }
