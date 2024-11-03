@@ -10,18 +10,15 @@ using System.Windows.Forms;
 
 namespace visual_tasks
 {
-    public partial class Form1 : Form
+    public partial class FCalculatorForm : Form
     {
-        public Form1()
+        public FCalculatorForm()
         {
             InitializeComponent();
         }
 
-        private void Open_Calculator(object sender, EventArgs e)
+        private void load_data(object sender, EventArgs e)
         {
-            FCalculatorForm calculatorForm = new FCalculatorForm();
-
-            calculatorForm.Show();
 
         }
     }
